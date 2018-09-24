@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="learnspringboot.mybatis.interceptor.ModelDao">
+    <insert id="save">
+		insert into cmy_interface (code, name, id) values (#{code}, #{name}, #{id})
+	</insert>
+
+    <select id="findByKey" resultType="learnspringboot.mybatis.interceptor.Model">
+		SELECT * FROM cmy_interface WHERE id = #{id}
+	</select>
+
+    <select id="findAll" resultType="learnspringboot.mybatis.interceptor.Model">
+		SELECT * FROM cmy_interface
+	</select>
+</mapper>
